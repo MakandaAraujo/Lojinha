@@ -1,0 +1,244 @@
+/* Estilo para o corpo da página e fundo */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #bbe4e5;
+}
+
+/* Estilo para o header e navbar */
+header {
+    background-color: #ffe4e1; 
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaçamento entre os grupos de elementos */
+}
+
+.logo {
+    margin-right: 20px; /* Adiciona um pequeno espaçamento entre a logo e os links de navegação */
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #f799a8;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+    color: #c71585;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn-receber {
+    background-color: #c71585;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
+    transition: transform 0.2s;
+}
+
+.btn-receber:hover {
+    background-color: #b10e70;
+    transform: scale(1.05);
+}
+
+.btn-doar {
+    background-color: #1e90ff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: large;
+    transition: transform 0.2s;
+}
+
+.btn-doar:hover {
+    background-color: #1a78e0; 
+    transform: scale(1.05);
+}
+
+/* Estilo para o h2 abaixo da navbar */
+h2 {
+    text-align: center;
+    color: #f48494;
+    font-weight: bold;
+    margin: 40px 0;
+}
+
+/* Estilo para a seção de produtos */
+.product-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    justify-items: center;
+}
+
+@media (min-width: 800px) {
+    .product-section {
+        grid-template-columns: repeat(4, 1fr); /* Limita a 4 produtos por linha em telas maiores */
+    }
+}
+
+.product-item {
+    background-color: #feebee; 
+    width: 200px; /* Aproximadamente 5cm em telas de alta resolução */
+    height: 290px; /* Aproximadamente 8cm em telas de alta resolução */
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    transition: transform 0.2s;
+}
+
+.product-item:hover {
+    transform: scale(1.05);
+}
+
+.product-item img {
+    max-width: 180px;
+    height: auto;
+    margin: 0 auto 10px;
+}
+
+.product-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.product-name {
+    color: #1e90ff; /* Azul para o nome do produto */
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.product-price {
+    color: #333;
+    margin-top: 15px;
+}
+
+.product-price .currency {
+    color: #1e90ff; /* Azul para "R$" */
+}
+
+.product-price .amount {
+    color: #ff5470; /* Rosa para "50,00" */
+}
+
+/* Estilo para a barra de busca */
+.search-container {
+    display: flex; /* Alinha o ícone e o input em linha */
+    align-items: center; /* Alinha verticalmente os itens no centro */
+    position: relative; /* Para posicionar o input em relação ao ícone */
+}
+
+#search {
+    width: 0; /* Começa como 0 para ocultar inicialmente */
+    height: 40px; /* Altura */
+    padding: 10px; /* Espaçamento interno */
+    border: 1px solid #ccc; /* Borda */
+    border-radius: 5px; /* Bordas arredondadas */
+    color: #333; /* Cor do texto */
+    background-color: #fff; /* Cor de fundo */
+    transition: width 0.4s ease; /* Animação suave ao expandir */
+    margin-left: 10px; /* Espaçamento à esquerda para separar do ícone */
+}
+
+#search-icon {
+    cursor: pointer; /* Muda o cursor ao passar o mouse sobre o ícone */
+    font-size: 24px; /* Tamanho do ícone */
+    margin-left: 60px;
+    color: #f48494;
+}
+
+#search:focus {
+    border-color: #ff5470; /* Muda a cor da borda ao focar */
+    outline: none; /* Remove o contorno padrão do foco */
+}
+
+/* Mensagem de produto não encontrado */
+#not-found {
+    display: none; /* Começa como escondido */
+    opacity: 0; /* Começa com opacidade 0 */
+    transition: opacity 0.5s ease; /* Transição de opacidade */
+    color: #ff5470; /* Cor da mensagem */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px 0; /* Espaço em cima e embaixo */
+}
+
+/* Estilo para o footer */
+footer {
+    background-color: #4cb9b9; 
+    color: white;
+    text-align: left; 
+    padding: 20px; 
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo img {
+    max-height: 60px; 
+}
+
+.footer-social {
+    text-align: right; 
+    padding: 10px;
+}
+
+.footer-social p {
+    margin: 0;
+    margin-bottom: 15px; /* Adiciona uma margem inferior para separar do próximo elemento */
+}
+
+.social-icons {
+    display: flex; 
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-top: 5px; 
+}
+
+.social-icons a {
+    color: white; 
+    text-decoration: none;
+    font-size: 24px; 
+}
+
+.social-icons a:hover {
+    color: #ff69b4;
+}
